@@ -3,11 +3,10 @@
 <head>
 	<title>Music Player - Sing in</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="assets/styles/authorization&registration.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/header.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/footer.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/common.css">
-	<link rel="stylesheet" type="text/css" href="assets/styles/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/authorization&registration.css">
 	<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -65,17 +64,55 @@
 	</header>
 <!----------->
 	<main>
-		<section class="playlist-container">
-			<h2 class="title-section-text">
-				Create playlist:
-			</h2>
-			<p class="explanation-text">
-				Listen to a playlist of music just right for you.
-				<br>
-				You can create several playlists at once by adding your favorite songs to them.
-			</p>
-		</section>
-	
+		<form>
+			<div class="div-form-size">
+				<div class="div-auth-text">
+					<h1 class="title-auth-text">Upload a song</h1>
+				</div>
+				<div class="div-auth-box">
+					<div class="div-auth-help-text">
+						<p>Song name</p>
+						<input type="text" id="name" name="name" placeholder="Enter song name" required>
+					</div>
+					<div class="div-auth-help-text">
+						<p>Performer</p>
+						<input type="text" id="performer" name="performer" placeholder="Enter performer" required>
+					</div>
+					<div class="div-auth-help-text">
+						<p>Image</p>
+						<input class="file-field" id="image" type="file" name="image" accept=".jpg, .png, .jpeg" required/>
+					</div>
+					<div class="div-auth-help-text">
+						<p>Mp3 file</p>
+						<input class="file-field" id="mp3" type="file" name="mp3" accept=".mp3" required/>
+					</div>
+					<div class="div-button-auth">
+						<button class="auth-btn">Upload</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		TODO:<br>
+		<progress class="uploader" id="uploader" value="0" max = "100">0%<progress></progress>
+
+        <div class="form-upload-song">
+			<form class="form-upload-song">
+				<label class="label-text"for="name">Song name:</label>
+				<input class="input-field" id="name" type="text" name="name" autocomplete="off" required/><br>
+
+				<label class="label-text" for="author">Performer:</label>
+				<input class="input-field" id="author" type="text" name="author" autocomplete="off" required/><br>
+
+				<label class="label-text" for="image">Image:</label>
+				<input class="file-field" id="image" type="file" name="image" accept=".jpg, .png, .jpeg" required/><br>
+
+				<label class="label-text" for="mp3">Mp3 file:</label>
+				<input class="file-field" id="mp3" type="file" name="mp3" accept=".mp3" required/><br>
+
+				<input class="submit-button" id="addButton" type="submit" value="Upload">
+				<progress class="uploader" id="uploader" value="0" max = "100">0%<progress>
+			</form> 
+		</div>
 	</main>
 <!----------->
 		<footer>
