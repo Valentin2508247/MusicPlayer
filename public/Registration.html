@@ -57,28 +57,71 @@
 </header>
 <!----------->
 	<main>
-		<form>
+		<form onsubmit="return false;">
 			<div class="div-form-size">
 				<div class="div-auth-text">
 					<h1 class="title-auth-text">Registration</h1>
 				</div>
 				<div class="div-auth-box">
 					<div class="div-auth-help-text">
-						<p>Login</p>
-						<input type="text" placeholder="Enter login">
+						<p>Email</p>
+						<input type="email" placeholder="Enter email" id="email">
 					</div>
 					<div class="div-auth-help-text">
 						<p>Password</p>
-						<input type="password" placeholder="Enter password">
+						<input type="password" placeholder="Enter password" id="password">
 						<br>
-						<input type="password" placeholder="Confirm password">
+						<input type="password" placeholder="Confirm password" id="passwordConfirm">
 					</div>
 					<div class="div-button-auth">
-						<button class="auth-btn">Sing up</button>
+						<button class="auth-btn" id="regButton">Sing up</button>
 					</div>
 				</div>
 			</div>
-		<form>
+		</form>
+
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyDeP4ALp3ruga8OaDeKpOFZgT-O3l9Gjw4",
+				authDomain: "valenitn-music.firebaseapp.com",
+				databaseURL: "https://valenitn-music.firebaseio.com",
+				projectId: "valenitn-music",
+				storageBucket: "valenitn-music.appspot.com",
+				messagingSenderId: "180826074845",
+				appId: "1:180826074845:web:bb10e446d587815ee0b534"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			var auth = firebase.auth();
+			var db = firebase.database();
+			// TODO: fix
+			//var storage = firebase.app().storage("gs://mplayer-coyoto.appspot.com");
+		</script>
+		<script>
+			document.querySelector('#regButton').onclick = function() {
+				console.log("Hello from event");
+				email = document.querySelector('#email').value;
+				password = document.querySelector('#password').value;
+				passwordConfirm = document.querySelector("#passwordConfirm").value;
+				alert("Email is " + email + "\nPass is " + password + "\nPass confirm is " + passwordConfirm);
+				if (password == passwordConfirm){
+					alert("Creating user");
+					const promise = auth.createUserWithEmailAndPassword(email, password);
+					alert("Promise is " + promise);
+					// TODO: update header 
+					window.location.hash = '#/index';
+                    promise.catch(e => {
+                        alert(e.message);
+                    });
+				}
+				return true;
+			}
+		</script>
 	</main>
 <!----------->
 	<footer>
