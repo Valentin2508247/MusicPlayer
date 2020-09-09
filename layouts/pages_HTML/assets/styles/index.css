@@ -1,0 +1,33 @@
+.playlist-container {
+	height: auto;
+	display: flex;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	flex-direction: column;
+	width: 100%;
+}
+
+nav .navigation-container {
+	height: auto;
+	display: flex;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	flex-direction: column;
+	width: 100%;
+}
+
+.title-section-text {
+	font-family: 'Odibee Sans', cursive;
+	font-size: 35px;
+	letter-spacing: 1px;
+	padding-bottom: 0.4%;
+	margin-left: 0.5%;
+}
+
+.explanation-text {
+	font-family: 'Odibee Sans', cursive;
+	font-size: 25px;
+	letter-spacing: 1px;
+	padding-top: 0.4%;
+	margin-left: 0.5%;
+}
