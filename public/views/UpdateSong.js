@@ -41,7 +41,9 @@ let UpdateSong = {
         if(this.scrollTop > 0){
             this.style.height = this.scrollHeight + "px";
         }
-        });
+		});
+		
+
     }
 }
 
