@@ -14,14 +14,12 @@
 <!----------->
     <header>
         <div class="header-container">
-            <a href="index.html">
-                <div class="div-player-logo">
-                    <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
-                    <div class="div-header-player-name">
-                        Music Player
-                    </div>
-                </div>
-            </a>
+			<div class="div-player-logo">
+				<img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
+				<h3 class="h3-header-name">
+					Music Player
+				</h3>
+			</div>
             <div class="div-header-buttons">
                 <a class="header-ref-button" href="Аuthorization.html">
                     <div class="header-btn">
@@ -33,7 +31,7 @@
                         <p>Sing up</p>
                     </div>
                 </a>
-                <a class="header-ref-button" href="#">
+                <a class="header-ref-button" href="index.html">
                     <div class="header-btn">
                         <p>
                             Log out
@@ -68,15 +66,15 @@
 		<form>
 			<div class="div-form-size">
 				<div class="div-auth-text">
-					<h1 class="title-auth-text">Create a playlist</h1>
+					<h3 class="title-auth-text">Create a playlist</h1>
 				</div>
 				<div class="div-auth-box">
 					<div class="div-auth-help-text">
-						<p>Playlist name</p>
+						<label for="name">Playlist name</label> <br/>
 						<input type="text" id="name" name="name" placeholder="Enter playlist name" required>
 					</div>
 					<div class="div-auth-help-text">
-						<p>Image</p>
+						<label for="image">Image</label> <br/>
                         <input class="file-field" id="image" type="file" name="image" accept=".jpg, .png, .jpeg" required/>
 					</div>
 

@@ -1,11 +1,11 @@
-.flex-container {
+ul.ul-flex-playlist-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;    
 }
 
-
-.flex-container > div.flex-playlist-item {
+li.li-flex-playlist-item {
+    list-style-type: none;
     background-color: #644A9A;
     width: 100px;
     margin: 10px;
@@ -15,10 +15,10 @@
     color: #F2F2F2;
     border-radius: 25px;
     border: 4px solid;
-    border-color: #B0D7FF;
+    border-color: #B0D7FF;    
 }
 
-.flex-container > div.flex-playlist-item:hover {
+li.li-flex-playlist-item:hover {
     background-color: #523986;
     width: 100px;
     margin: 10px;
@@ -28,40 +28,15 @@
     color: #E2E2E2;
 }
 
-.img-playlist-logo {
-    height: 60px;
-    width: 60px;
-}
-
-.flex-nav-container {
-	background-color: #644A9A;
+.flex-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.flex-nav-container > a {
-    width: 150px;
-    margin: 10px;
-    text-align: center;
-    line-height: 30px;
-	font-size: 30px;
-	font-family: 'Odibee Sans', cursive;
-	font-size: 22px;
-	letter-spacing: 1px;
-	color: #B0D7FF;
-}
-
-.flex-nav-container > a:hover {
-    width: 150px;
-    margin: 10px;
-    text-align: center;
-    line-height: 30px;
-	font-size: 30px;
-	font-family: 'Odibee Sans', cursive;
-	font-size: 24px;
-	letter-spacing: 1px;
-	color: #A0C5EA;
+.img-playlist-logo {
+    height: 60px;
+    width: 60px;
 }
 
 a.playlist-ref-button {

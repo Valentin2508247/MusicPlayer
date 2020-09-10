@@ -68,7 +68,7 @@ form input:focus {
 	flex-direction: column;
 }
 
-.div-auth-help-text {
+div.div-auth-help-text label{
 	font-family: 'Odibee Sans', cursive;
 	font-size: 23px;
 	letter-spacing: 1px;

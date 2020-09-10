@@ -13,14 +13,12 @@
 <!----------->
 	<header>
 		<div class="header-container">
-			<a href="index.html">
-				<div class="div-player-logo">
-					<img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
-					<div class="div-header-player-name">
-						Music Player
-					</div>
-				</div>
-			</a>
+			<div class="div-player-logo">
+				<img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
+				<h3 class="h3-header-name">
+					Music Player
+				</h3>
+			</div>
 			<div class="div-header-buttons">
 				<a class="header-ref-button" href="Аuthorization.html">
 					<div class="header-btn">
@@ -32,7 +30,7 @@
 						<p>Sing up</p>
 					</div>
 				</a>
-				<a class="header-ref-button" href="#">
+				<a class="header-ref-button" href="index.html">
 					<div class="header-btn">
 						<p>
 							Log out
@@ -71,22 +69,22 @@
 				</div>
 				<div class="div-auth-box">
 					<div class="div-auth-help-text">
-						<p>Song name</p>
+						<label for="name">Song name</label> <br/>
 						<input type="text" id="name" name="name" placeholder="Enter song name" required value="Old name">
 					</div>
 					<div class="div-auth-help-text">
-						<p>Performer</p>
+						<label for="performer">Performer</label> <br/>
 						<input type="text" id="performer" name="performer" placeholder="Enter performer" required value="Old performer">
 					</div>
 					<div class="div-auth-help-text">
-						<p>Image</p>
+						<label for="image">Image</label> <br/>
                         <input class="file-field" id="image" type="file" name="image" accept=".jpg, .png, .jpeg" required/>
                         <br>TODO:current image
 					</div>
 
                     <div class="div-auth-help-text">
-                        <p>Lurics</p>
-                        <textarea name="Lurics" placeholder="Song lurics" cols="60" id="textarea"></textarea>
+						<label for="lyrics">Lyrics</label> <br/>
+                        <textarea name="lyrics" placeholder="Song lyrics" cols="60" id="textarea"></textarea>
                     </div>
 
 					<div class="div-button-auth">
