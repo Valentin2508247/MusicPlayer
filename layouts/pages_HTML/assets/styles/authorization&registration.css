@@ -1,0 +1,102 @@
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.div-form-size {
+	width: 60%;
+	height: 60%;
+}
+
+.div-auth-text {
+	display: flex;
+	justify-content: center;
+}
+
+form input {
+	font-family: 'Odibee Sans', cursive;
+	font-size: 20px;
+	letter-spacing: 1px;
+	padding: 10px;
+	margin-top: 2%;
+	margin-bottom: 3%;
+	border: 4px solid #644A9A;
+	border-radius: 7px;
+	outline: none;
+	width: 350px;
+	transition: 0.5s;
+}
+
+form textarea {
+	font-family: 'Odibee Sans', cursive;
+	font-size: 20px;
+	letter-spacing: 1px;
+	padding: 10px;
+	margin-top: 2%;
+	margin-bottom: 3%;
+	border: 4px solid #644A9A;
+	border-radius: 7px;
+	outline: none;
+	width: 350px;
+	transition: 0.5s;	
+}
+
+form input:hover {
+	box-shadow: 0 5px 28px rgba(0,0,0,0.25), 0 0 28px rgba(0,0,0,0.22);
+}
+
+form input:focus {
+	border: 4px solid #141466;
+	box-shadow: 0 5px 28px rgba(0,0,0,0.25), 0 0 28px rgba(0,0,0,0.22);
+}
+
+.title-auth-text {
+ 	font-family: 'Odibee Sans', cursive;
+	font-size: 30px;
+	letter-spacing: 2px;
+	color: #1E1E1E;
+}
+
+.div-auth-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+div.div-auth-help-text label{
+	font-family: 'Odibee Sans', cursive;
+	font-size: 23px;
+	letter-spacing: 1px;
+	color: #1E1E1E;
+}
+
+.div-button-auth {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.auth-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 4px solid;
+    border-color: #644A9A;
+    background-color: #6982FF;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 20px;
+    color: #1E1E1E;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+     border-color: #141466;
+     box-shadow: 0 5px 28px rgba(0,0,0,0.25), 0 0 28px rgba(0,0,0,0.22);
+}
