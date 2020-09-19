@@ -83,7 +83,6 @@ let UpdateSong = {
 		var songRef = db.ref('songs/' + id);
 		let song;
 		songRef.on('value', function(snapshot) {
-			alert('Getting info from db');
 			song = snapshot.val();
 			updateFormValues(song);
 			//set current image
@@ -106,6 +105,9 @@ let UpdateSong = {
 			let image = document.querySelector('#image');
 			if (image.value === ''){
 				console.log('No file');
+				songRef.set(song);
+				console.log('Song updated');
+				location.hash = '#/songs';
 			}
 			else{
 				console.log('File selected');
@@ -133,13 +135,14 @@ let UpdateSong = {
 					function complete(){
 						putImageTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
 							console.log('File available at', downloadURL);
+							songRef.set(song);
+							console.log('Song updated');
 							location.hash = '#/songs';
 						});
 					}
 				);
 			}
-			songRef.set(song);
-			console.log('Song updated');
+
 		};
     }
 }

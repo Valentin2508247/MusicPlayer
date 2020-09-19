@@ -55,8 +55,6 @@ const router = async () => {
     
     //footer
     footer.innerHTML = await Footer.render();
-
-
 }
 
 
@@ -69,13 +67,8 @@ window.addEventListener('hashchange', router);
 window.addEventListener('load', router);
 
 // Listen on signing in or logging out:
+//redraw header
 auth.onAuthStateChanged(async function(user) {
-    /*if (user){
-        alert("User is signed in. Event");
-    }
-    else{
-        alert("No user is signed in. Event");
-    }*/
     const header = null || document.querySelector('header');
     if (header != null)
     {

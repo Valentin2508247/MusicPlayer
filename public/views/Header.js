@@ -3,17 +3,47 @@ let Header = {
         let user = firebase.auth().currentUser;
         let topPart;
         if (user) {
+
+            `
+            <header>
+            <div class="header-container">	
+                <div class="div-player-logo">
+                    <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
+                    <h1 class="h1-header-name">
+                        Music Player
+                    </h1>
+                </div>
+                <div class="div-header-buttons">
+                    <a class="header-ref-button" href="Аuthorization.html">
+                        <div class="header-btn">
+                            <p>Sign in</p>
+                        </div>
+                    </a>
+                    <a class="header-ref-button" href="Registration.html">
+                        <div class="header-btn">
+                            <p>Sing up</p>
+                        </div>
+                    </a>
+                    <a class="header-ref-button" href="index.html">
+                        <div class="header-btn">
+                            <p>
+                                Log out
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            `
+
             // User is signed in.
             topPart = `
             <div class="header-container">
-            <a href="#/index">
                 <div class="div-player-logo">
                     <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
-                    <div class="div-header-player-name">
+                    <h1 class="h1-header-name">
                         Music Player
-                    </div>
+                    </h1>
                 </div>
-            </a>
             <div class="div-header-buttons">
                 <a class="header-ref-button" href="#/index">
                     <div class="header-btn">
@@ -36,14 +66,12 @@ let Header = {
             if (parsedURL == '/authorization'){
                 topPart = `
                 <div class="header-container">
-                    <a href="#/index">
-                        <div class="div-player-logo">
-                            <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
-                            <div class="div-header-player-name">
-                                Music Player
-                            </div>
-                        </div>
-                    </a>
+                    <div class="div-player-logo">
+                        <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
+                        <h1 class="h1-header-name">
+                            Music Player
+                        </h1>
+                    </div>
                     <div class="div-header-buttons">
                         <a class="header-ref-button" href="#/index">
                             <div class="header-btn">
@@ -62,14 +90,12 @@ let Header = {
             else if (parsedURL == '/registration'){
                 topPart = `
                 <div class="header-container">
-                    <a href="#/index">
-                        <div class="div-player-logo">
-                            <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
-                            <div class="div-header-player-name">
-                                Music Player
-                            </div>
-                        </div>
-                    </a>
+                    <div class="div-player-logo">
+                        <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
+                        <h1 class="h1-header-name">
+                            Music Player
+                        </h1>
+                    </div>
                     <div class="div-header-buttons">
                         <a class="header-ref-button" href="#/index">
                             <div class="header-btn">
@@ -88,14 +114,12 @@ let Header = {
             else{
                 topPart = `
                 <div class="header-container">
-                    <a href="#/index">
-                        <div class="div-player-logo">
-                            <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
-                            <div class="div-header-player-name">
-                                Music Player
-                            </div>
-                        </div>
-                    </a>
+                    <div class="div-player-logo">
+                        <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
+                        <h1 class="h1-header-name">
+                            Music Player
+                        </h1>
+                    </div>
                     <div class="div-header-buttons">
                         <a class="header-ref-button" href="#/index">
                             <div class="header-btn">
