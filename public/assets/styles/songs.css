@@ -45,7 +45,7 @@ img.img-song-logo {
 }
 
 li.li-song-controls-container > p.p-song-description{
-    font-family: 'Odibee Sans', cursive;
+    /*font-family: 'Odibee Sans', cursive;*/
 	font-size: 22px;
 	letter-spacing: 1px;
 }

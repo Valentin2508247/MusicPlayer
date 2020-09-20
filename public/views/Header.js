@@ -3,38 +3,6 @@ let Header = {
         let user = firebase.auth().currentUser;
         let topPart;
         if (user) {
-
-            `
-            <header>
-            <div class="header-container">	
-                <div class="div-player-logo">
-                    <img class="img-player-logo-size" src="assets/images/PlayerLogo.png" alt="Logo">
-                    <h1 class="h1-header-name">
-                        Music Player
-                    </h1>
-                </div>
-                <div class="div-header-buttons">
-                    <a class="header-ref-button" href="Аuthorization.html">
-                        <div class="header-btn">
-                            <p>Sign in</p>
-                        </div>
-                    </a>
-                    <a class="header-ref-button" href="Registration.html">
-                        <div class="header-btn">
-                            <p>Sing up</p>
-                        </div>
-                    </a>
-                    <a class="header-ref-button" href="index.html">
-                        <div class="header-btn">
-                            <p>
-                                Log out
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            `
-
             // User is signed in.
             topPart = `
             <div class="header-container">
@@ -121,11 +89,6 @@ let Header = {
                         </h1>
                     </div>
                     <div class="div-header-buttons">
-                        <a class="header-ref-button" href="#/index">
-                            <div class="header-btn">
-                                <p>On main page</p>
-                            </div>
-                        </a>
                         <a class="header-ref-button" href="#/authorization">
                             <div class="header-btn">
                                 <p>Sing in</p>

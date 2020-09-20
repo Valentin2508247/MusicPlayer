@@ -40,9 +40,9 @@ const router = async () => {
         '\nId: ' + request.id);
     let id = request.id;
 
-    const header = null || document.querySelector('header');
-    const main = null || document.querySelector('main');
-    const footer = null || document.querySelector('footer');
+    const header = document.querySelector('header');
+    const main = document.querySelector('main');
+    const footer = document.querySelector('footer');
 
     let page = routes[parsedURL] ? routes[parsedURL] : Error404;
     main.innerHTML = await page.render(id); 

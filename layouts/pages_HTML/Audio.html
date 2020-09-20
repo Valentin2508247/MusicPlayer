@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/styles/addplaylist.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/playlists.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/songs.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles/audio.css">
 	<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
 </head>
 <body>	
@@ -61,22 +62,22 @@
 			<a class="navigation-ref-button" href="AddPlaylist.html">
 				Add playlist
 			</a>
-			<a class="navigation-ref-button" href="Audio.html">
-				Audio
-			</a>
 		</nav>	
 	</header>
 	<main>
-		<section class="playlist-container">
-			<h2 class="title-section-text">
-				Create playlist:
-			</h2>
-			<p class="explanation-text">
-				Listen to a playlist of music just right for you.
-				<br>
-				You can create several playlists at once by adding your favorite songs to them.
-			</p>
-		</section>
+		<br>
+		<div class="audio-conrols-container">
+			<audio id="audio-player">
+				Not supported by your browser
+		 </audio>
+			<button type="button" class="button-with-image">
+				<img class="img-song-logo" src="assets/images/play.png" alt="song">
+			</button>
+			<p>3:10/4:17</p>
+			<p>Song name</p>
+			<p>Performer</p>
+		</div>
+		<br>
 	</main>
 		<footer>
 		<div class="div-footer-feedback">
