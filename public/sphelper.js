@@ -15,14 +15,21 @@ import Utils from './utils.js';
 
 const routes = {
     '/index': Index,
+    '/authorization': Authorization,
+    '/registration': Registration
+};
+
+const authorizedRoutes = {
+    '/index': Index,
     '/playlists': Playlists,
     '/authorization': Authorization,
     '/registration': Registration,
     '/songs': Songs,
     '/uploadsong': UploadSong,
     '/updatesong': UpdateSong,
-    '/addplaylist': AddPlaylist
-};
+    '/addplaylist': AddPlaylist    
+}
+
 var firstTime = true;
 
 const router = async () => {
@@ -31,6 +38,7 @@ const router = async () => {
         location.hash = "#/index";
         return;
     }
+
     let request = Utils.parseRequestURL();
     /*let parsedURL = (request.resource ? '/' + request.resource : '/') + 
         (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '');
@@ -44,7 +52,16 @@ const router = async () => {
     const main = document.querySelector('main');
     const footer = document.querySelector('footer');
 
-    let page = routes[parsedURL] ? routes[parsedURL] : Error404;
+    let user = auth.currentUser;
+    let page;
+    if (user){
+        //User is signed in
+        page = authorizedRoutes[parsedURL] ? authorizedRoutes[parsedURL] : Error404;
+    }
+    else{
+        //No user signed in
+        page = routes[parsedURL] ? routes[parsedURL] : Error404;
+    }
     main.innerHTML = await page.render(id); 
     //events
     await page.afterRender(id);

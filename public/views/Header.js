@@ -104,26 +104,26 @@ let Header = {
                 `;
             }
         }
-        var bottomPart = `
+
+        let bottomPart = `
         <nav class="flex-nav-container">
             <a class="navigation-ref-button" href="#/index">
                 Main page
             </a>
-            <a class="navigation-ref-button" href="#/playlists">
-                Playlists
-            </a>
+            ${user ? ` 
             <a class="navigation-ref-button" href="#/songs">
                 Songs
             </a>
             <a class="navigation-ref-button" href="#/uploadsong">
                 Upload song
             </a>
-            <a class="navigation-ref-button" href="#/updatesong">
-                Update song
+            <a class="navigation-ref-button" href="#/playlists">
+                Playlists
             </a>
             <a class="navigation-ref-button" href="#/addplaylist">
                 Add playlist
-            </a>
+            </a>` :
+            ''}
         </nav>	
         `
         return topPart + bottomPart;
