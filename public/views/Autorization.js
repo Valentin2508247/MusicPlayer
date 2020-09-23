@@ -4,15 +4,15 @@ let Authorization = {
 		<form onsubmit="return false;">
 			<div class="div-form-size">
 				<div class="div-auth-text">
-					<h1 class="title-auth-text">Authorization</h1>
+					<h3 class="title-auth-text">Authorization</h3>
 				</div>
 				<div class="div-auth-box">
 					<div class="div-auth-help-text">
-						<p>Email</p>
+						<label for="email">Email</label> <br/>
 						<input type="email" placeholder="Enter email" id="email">
 					</div>
 					<div class="div-auth-help-text">
-						<p>Password</p>
+						<label for="password">Password</label> <br/>
 						<input type="password" placeholder="Enter password" id=password>
 					</div>
 					<div class="div-button-auth">

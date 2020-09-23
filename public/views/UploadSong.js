@@ -8,24 +8,24 @@ let UploadSong = {
 		<form>
 			<div class="div-form-size">
 				<div class="div-auth-text">
-					<h1 class="title-auth-text">Upload a song</h1>
+					<h3 class="title-auth-text">Upload a song</h3>
 				</div>
 				<div class="div-auth-box">
 					<div class="div-auth-help-text">
-						<p>Song name</p>
+						<label for="name">Song name</label> <br/>
 						<input type="text" id="name" name="name" placeholder="Enter song name" >
 					</div>
 					<div class="div-auth-help-text">
-						<p>Performer</p>
+						<label for="performer">Performer</label> <br/>
 						<input type="text" id="performer" name="performer" placeholder="Enter performer" >
 					</div>
 					<div class="div-auth-help-text">
-						<p>Image</p>
+						<label for="image">Image</label> <br/>
 						<input class="file-field" id="image" type="file" name="image" accept=".jpg, .png, .jpeg" />
 					</div>
 					<div 
 					<div class="div-auth-help-text">
-						<p>Mp3 file</p>
+						<label for="mp3">Mp3 file</label> <br/>
 						<input class="file-field" id="mp3" type="file" name="mp3" accept=".mp3" />
 					</div>
 					<div class="div-button-auth">

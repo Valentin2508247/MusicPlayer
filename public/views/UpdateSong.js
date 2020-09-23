@@ -33,27 +33,27 @@ let UpdateSong = {
 		<form>
 			<div class="div-form-size">
 				<div class="div-auth-text">
-					<h1 class="title-auth-text">Update a song</h1>
+					<h3 class="title-auth-text">Update a song</h3>
 				</div>
 				<div class="div-auth-box">
 					<div class="div-auth-help-text">
-						<p>Song name</p>
+						<label for="name">Song name</label> <br/>
 						<input type="text" id="name" name="name" placeholder="Enter song name" required value="Old name">
 					</div>
 					<div class="div-auth-help-text">
-						<p>Performer</p>
+						<label for="performer">Performer</label> <br/>
 						<input type="text" id="performer" name="performer" placeholder="Enter performer" required value="Old performer">
 					</div>
 					<div class="div-auth-help-text">
-						<p>Image</p>
+						<label for="image">Image</label> <br/>
                         <input class="file-field" id="image" type="file" name="image" accept=".jpg, .png, .jpeg" required/>
 					</div>
 					<div>
-						<p>Current image:</p>
+						<label for="image">Current image:</label> <br/>
 						<img class="img-song-logo" id="icon-image" alt="Song icon"/>
 					</div>
                     <div class="div-auth-help-text">
-                        <p>Lyrics</p>
+						<label for="Lyrics">Lyrics</label> <br/>
                         <textarea name="Lyrics" placeholder="Song lyrics" cols="60" id="textarea"></textarea>
                     </div>
 

@@ -10,6 +10,8 @@ import UpdateSong from './views/UpdateSong.js';
 import UploadSong from './views/UploadSong.js';
 import AddPlaylist from './views/AddPlaylist.js';
 import Error404 from './views/Error404.js';
+import AddingSongs from './views/AddingSongs.js';
+import PlaylistSongs from './views/PlaylistSongs.js';
 
 import Utils from './utils.js';
 
@@ -27,7 +29,9 @@ const authorizedRoutes = {
     '/songs': Songs,
     '/uploadsong': UploadSong,
     '/updatesong': UpdateSong,
-    '/addplaylist': AddPlaylist    
+    '/addplaylist': AddPlaylist,
+    '/addingsongs': AddingSongs,
+    '/playlistsongs': PlaylistSongs
 }
 
 var firstTime = true;

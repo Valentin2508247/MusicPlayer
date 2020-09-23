@@ -59,3 +59,10 @@ li.li-song-controls-container:hover button.button-with-image{
     background-color: #AEB7E5;
     border: none;
 }
+
+.div-near-elements {
+    display: flex;
+    width: 130px;   
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}

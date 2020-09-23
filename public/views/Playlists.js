@@ -7,14 +7,14 @@ function loadImage(path, img){
 	});
 }
 
-function renderLiPlaylist(key, value){
+function renderLIPlaylist(key, value){
   let li = document.createElement('li');
   li.className = 'li-flex-playlist-item';
 
   let a = document.createElement('a');
   a.className = 'playlist-ref-button';
-  a.setAttribute('href', '#/songs/' + key);
-
+  //a.setAttribute('href', '#/addingsongs/' + key);
+  a.setAttribute('href', '#/playlistsongs/' + key);
   let p = document.createElement('p');
   p.innerText = value.name;
   a.appendChild(p);
@@ -58,7 +58,7 @@ let Playlists = {
             var childData = childSnapshot.val();
             console.log('Key: ' + childKey +
             '\nData: ' + JSON.stringify(childData));
-          ul.appendChild(renderLiPlaylist(childKey, childData));
+          ul.appendChild(renderLIPlaylist(childKey, childData));
         });
       });
     }
