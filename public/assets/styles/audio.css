@@ -1,0 +1,48 @@
+.audio-conrols-container {
+    padding-left: 3px;
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    border-width: 1.5px 2px;
+    border-color: #644A9A;
+    border-radius: 4px;
+}   
+
+.audio-conrols-container:hover {
+    padding-left: 3px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    border-width: 1.5px 2px;
+    border-color: #644A9A;
+    border-radius: 4px;
+    background-color: #AEB7E5;
+}   
+
+.audio-conrols-container button.button-with-image{
+    background-color: #BEC9F9;
+    border: none;
+}
+
+.audio-conrols-container:hover button.button-with-image{
+    background-color: #AEB7E5;
+    border: none;
+}
+
+.p-audio-description {
+    /*font-family: 'Odibee Sans', cursive;*/
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+div.two-line-text{
+    width: 100;
+    justify-content: space-around;
+}

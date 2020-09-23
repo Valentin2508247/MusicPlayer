@@ -1,0 +1,61 @@
+li.li-song-controls-container {
+    list-style-type: none;
+}
+
+li.li-song-controls-container:hover {
+    list-style-type: none;
+    background-color: #AEB7E5;
+}
+
+article.article-song-controls-container {
+    height: 60;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    border-width: 1.5px 2px;
+    border-color: #644A9A;
+    border-radius: 4px;
+}    
+
+article.article-song-controls-container:hover {
+    height: 60;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    border-width: 1.5px 2px;
+    border-color: #533988;
+    border-radius: 4px;
+    background-color: #AEB7E5;
+}  
+
+ul.ul-songs-container {
+    width: 500px;
+    height: 60%;
+    margin: auto;
+}
+
+img.img-song-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+}
+
+li.li-song-controls-container > p.p-song-description{
+    /*font-family: 'Odibee Sans', cursive;*/
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+li.li-song-controls-container button.button-with-image{
+    background-color: #BEC9F9;
+    border: none;
+}
+
+li.li-song-controls-container:hover button.button-with-image{
+    background-color: #AEB7E5;
+    border: none;
+}
