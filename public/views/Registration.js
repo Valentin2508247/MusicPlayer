@@ -4,17 +4,17 @@ let Registration = {
         <form onsubmit="return false;">
             <div class="div-form-size">
                 <div class="div-auth-text">
-                    <h1 class="title-auth-text">Registration</h1>
+                    <h3 class="title-auth-text">Registration</h3>
                 </div>
                 <div class="div-auth-box">
                     <div class="div-auth-help-text">
-                        <p>Email</p>
+                        <label for="email">Email</label> <br/>
                         <input type="email" placeholder="Enter email" id="email">
                     </div>
                     <div class="div-auth-help-text">
-                        <p>Password</p>
+                        <label for="password">Password</label> <br/>
                         <input type="password" placeholder="Enter password" id="password">
-                        <br>
+                        <br/>
                         <input type="password" placeholder="Confirm password" id="passwordConfirm">
                     </div>
                     <div class="div-button-auth">

@@ -22,7 +22,7 @@ function initSongControls(song){
 	document.querySelector('#p-song-total-time').innerText = '0:00';
 
 	let range = document.querySelector('#song-play-current-time');
-	range.setAttribute('value', 0)
+	range.setAttribute('value', 0);
 }
 
 function renderSong(key, song){
@@ -32,6 +32,9 @@ function renderSong(key, song){
 	article.className = 'article-song-controls-container';
 	li.appendChild(article);
 	
+	let div = document.createElement('div');
+	div.className = 'div-near-elements';
+
 	//button with image
 	let buttonIcon = document.createElement('button');
 	buttonIcon.setAttribute('type', 'button');
@@ -41,9 +44,7 @@ function renderSong(key, song){
 	loadImage('images/' + song.imagePath, img);
 	img.setAttribute('alt', 'song');
 	buttonIcon.appendChild(img);
-	article.appendChild(buttonIcon);
-
-
+	div.appendChild(buttonIcon);
 
 	//creating play button
 	buttonIcon = document.createElement('button');
@@ -67,8 +68,10 @@ function renderSong(key, song){
 		  });
 		////
 	}
-	article.appendChild(buttonIcon);
-	
+	div.appendChild(buttonIcon);
+
+	article.appendChild(div);
+
 	//creating 2 p
 	let p1 = document.createElement('p');
 	p1.className = 'p-song-description';
@@ -120,21 +123,6 @@ let Songs = {
 		</div>
 		<br/>
         <ul class="ul-songs-container">
-		<!--	<li class="li-song-controls-container">
-				<article class="article-song-controls-container">
-					<button type="button" class="button-with-image">
-						<img class="img-song-logo" src="assets/images/PlayerLogo.png" alt="song">
-					</button>
-					<p class="p-song-description">Performer</p>
-					<p class="p-song-description">Song name</p>
-					<button type="button" class="button-with-image">
-						<img class="img-song-logo" src="assets/images/play.png" alt="play">
-					</button>
-					<button type="button" class="button-with-image">
-						<img class="img-song-logo" src="assets/images/pencil.png" alt="update">
-					</button>
-				</article>
-			</li> -->
 		</ul>
 		<br/>
         `
@@ -146,13 +134,13 @@ let Songs = {
 			let ul = document.querySelector('ul');
 			ul.innerHTML = "";
 			snapshot.forEach(function(childSnapshot) {
-			    var childKey = childSnapshot.key;
-			    var childData = childSnapshot.val();
-			    //console.log('Key: ' + childKey +
+				var childKey = childSnapshot.key;
+				var childData = childSnapshot.val();
+				//console.log('Key: ' + childKey +
 				//	'\nData: ' + JSON.stringify(childData));
 				ul.appendChild(renderSong(childKey, childData));
 			});
-		  });
+		});
 		
 		//controls events
 		let playButton = document.querySelector('#audio-control-play-button');
@@ -185,7 +173,6 @@ let Songs = {
 			let range = document.querySelector('#song-play-current-time');
 			range.setAttribute('max', totalTime)
 			});
-		
     }
 }
 

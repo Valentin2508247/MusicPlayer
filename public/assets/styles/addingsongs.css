@@ -1,0 +1,93 @@
+.div-playlist-description {
+    width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p#playlist-name {
+    font-family: 'Odibee Sans', cursive;
+	font-size: 28px;
+	letter-spacing: 1px;
+}
+
+p.song-name {
+    font-family: 'Odibee Sans', cursive;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+ul.ul-song-search-list{
+    width: 600px;
+    margin: auto;
+}
+
+li.li-song-search-list{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    border-width: 1.5px 2px;
+    border-color: #644A9A;
+    border-radius: 4px;
+}
+
+li.li-song-search-list:hover {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    border-width: 1.5px 2px;
+    border-color: #644A9A;
+    border-radius: 4px;
+    background-color: #AEB7E5;
+}
+
+.img-add-song-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+}
+
+button.button-add-song-to-playlist {
+    background-color: #BEC9F9;
+    border: none;
+}
+
+li.li-song-search-list:hover button.button-add-song-to-playlist {
+    background-color: #AEB7E5;
+    border: none;
+}
+
+.div-page-content {
+    width: 60%;
+    margin: auto;
+}
+
+input.input-song-search {
+    font-family: 'Odibee Sans', cursive;
+	font-size: 20px;
+	letter-spacing: 1px;
+	padding: 10px;
+	margin-top: 2%;
+	margin-bottom: 3%;
+	border: 4px solid #644A9A;
+	border-radius: 7px;
+	outline: none;
+	width: 350px;
+	transition: 0.5s;
+}
+
+input.input-song-search:hover {
+	box-shadow: 0 5px 28px rgba(0,0,0,0.25), 0 0 28px rgba(0,0,0,0.22);
+}
+
+input.input-song-search:focus {
+	border: 4px solid #141466;
+	box-shadow: 0 5px 28px rgba(0,0,0,0.25), 0 0 28px rgba(0,0,0,0.22);
+}
