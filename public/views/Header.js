@@ -122,7 +122,14 @@ let Header = {
             </a>
             <a class="navigation-ref-button" href="#/addplaylist">
                 Add playlist
-            </a>` :
+            </a>
+            <a class="navigation-ref-button" href="#/users">
+                Users
+            </a>
+            <a class="navigation-ref-button" href="#/logview">
+                Logs
+            </a>
+            ` :
             ''}
         </nav>	
         `

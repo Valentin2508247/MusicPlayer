@@ -12,6 +12,10 @@ import AddPlaylist from './views/AddPlaylist.js';
 import Error404 from './views/Error404.js';
 import AddingSongs from './views/AddingSongs.js';
 import PlaylistSongs from './views/PlaylistSongs.js';
+import Users from './views/Users.js';
+import LogView from './views/LogView.js';
+
+
 
 import Utils from './utils.js';
 
@@ -31,7 +35,9 @@ const authorizedRoutes = {
     '/updatesong': UpdateSong,
     '/addplaylist': AddPlaylist,
     '/addingsongs': AddingSongs,
-    '/playlistsongs': PlaylistSongs
+    '/playlistsongs': PlaylistSongs,
+    '/users': Users,
+    '/logview': LogView
 }
 
 var firstTime = true;
