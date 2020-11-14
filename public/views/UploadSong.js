@@ -51,6 +51,30 @@ let UploadSong = {
 			let imageFile = imageFileInput.files[0];
 			let musicFileInput = document.querySelector('#mp3');
 			let songFile = musicFileInput.files[0];
+				
+			
+			//validation
+			if (songName == '')
+			{
+				alert('Enter song name');
+				return;
+			}
+			if (performer == '')
+			{
+				alert('Enter performer');
+				return;
+			}	
+			if (!imageFile)
+			{
+				alert('Load an image');
+				return;
+			}
+			if (!songFile)
+			{
+				alert('Load a song');
+				return;
+			}
+
 
 			let song = {
 				songName: songName,
@@ -58,7 +82,30 @@ let UploadSong = {
 				imagePath: songID + '.' + getExtension(imageFile.name),
 				songPath:  songID + '.' + getExtension(songFile.name)
 			};
-			newSongRef.set(song);
+			let promise = newSongRef.set(song);
+			promise.then(
+				function () {
+					//saving log
+					let userID = auth.currentUser.uid;
+					let logReference = db.ref('logs/' + userID).push();
+					var currentDate = new Date(); 
+					var date = currentDate.getDate() + "/"
+                	+ (currentDate.getMonth()+1)  + "/" 
+                	+ currentDate.getFullYear();
+					let log = {
+						songId: songID,
+						songName: song.songName,
+						performer: song.performer,
+						imagePath: song.imagePath,
+						songPath: song.songPath,
+						date: date
+					};
+					logReference.set(log);
+				},
+				function () {
+					// Failure
+					console.log("on fail");
+				});
 
 			let storageRef = storage.ref();
 			//saving image to storage
@@ -104,7 +151,8 @@ let UploadSong = {
 						console.log('File available at', downloadURL);
 					});
 				}
-			);	
+			);
+			location.hash = '#/index';	
 		};
     }
 }

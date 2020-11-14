@@ -22,8 +22,8 @@ let Footer = {
             <div class="div-footer-feedback">
                 <p class="feedback-text">
                     Sponsored by:
-                    <a class="href-footer" href="mailto:Valentin2508247@mail.ru">
-                        alex.gmlta@gmail.com
+                    <a class="href-footer" href="mailto:mr_snegur@hotmail.com">
+                        mr_snegur@hotmail.com
                     </a>
                 </p>
             </div>
