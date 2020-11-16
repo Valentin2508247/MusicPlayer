@@ -19,6 +19,7 @@ let Users = {
               var userData = childSnapshot.val();
               let tr = document.createElement("tr");
               tr.classList.add('ul-users-tr');
+
               let email_td = document.createElement("td");
               
               let email_listener = (e) =>{
@@ -30,6 +31,8 @@ let Users = {
               email_td.addEventListener('click', email_listener);
 
               email_td.innerText = userData.email;
+              
+
               tr.appendChild(email_td);
               let role_td = document.createElement("td");
               role_td.innerText = userData.role;

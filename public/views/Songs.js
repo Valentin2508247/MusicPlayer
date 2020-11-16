@@ -76,6 +76,7 @@ function renderSong(key, song){
 	let p1 = document.createElement('p');
 	p1.className = 'p-song-description';
 	p1.innerText = song.performer;
+	p1.classList.add('song-perfoner');
 	article.appendChild(p1);
 	let p2 = document.createElement('p');
 	p2.className = 'p-song-description';
@@ -101,6 +102,7 @@ let Songs = {
     render: async (id) =>{
 		return `
 		<br/>
+		<!--
 		<div class="audio-conrols-container">
 			<audio id="audio-player">
 				Not supported by your browser
@@ -120,7 +122,7 @@ let Songs = {
 				<p class="p-audio-description" id="p-audio-description-performer">Performer</p>
 				<p class="p-audio-description" id="p-audio-description-song-name">Song name</p>
 			</div>
-		</div>
+		</div> -->
 		<br/>
         <ul class="ul-songs-container">
 		</ul>

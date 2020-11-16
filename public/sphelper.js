@@ -41,11 +41,15 @@ const authorizedRoutes = {
 }
 
 var firstTime = true;
+var userRole;
+const footer = document.querySelector('footer');
 
 const router = async () => {
     if (firstTime){
         firstTime = false;
         location.hash = "#/index";
+        footer.innerHTML = await Footer.render();
+        await Footer.afterRender();
         return;
     }
 
@@ -60,7 +64,7 @@ const router = async () => {
 
     const header = document.querySelector('header');
     const main = document.querySelector('main');
-    const footer = document.querySelector('footer');
+    //const footer = document.querySelector('footer');
 
     let user = auth.currentUser;
     let page;
@@ -81,7 +85,7 @@ const router = async () => {
     await Header.afterRender();
     
     //footer
-    footer.innerHTML = await Footer.render();
+    //footer.innerHTML = await Footer.render();
 }
 
 

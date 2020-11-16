@@ -37,12 +37,22 @@
 }
 
 .p-audio-description {
-    /*font-family: 'Odibee Sans', cursive;*/
-	font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 20px;
 	letter-spacing: 1px;
 }
 
 div.two-line-text{
     width: 100;
     justify-content: space-around;
+}
+
+.p-song-description{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+
+.song-perfoner{
+    color: #644A9A;
+    font-weight: 800;
 }
