@@ -19,8 +19,17 @@ let Users = {
               var userData = childSnapshot.val();
               let tr = document.createElement("tr");
               tr.classList.add('ul-users-tr');
+
               let email_td = document.createElement("td");
               email_td.innerText = userData.email;
+              
+              let email_listener = (e) =>{
+                console.log(e.target.innerText);
+                // Валя здесь надо будет в бд присвоить пользователю новое состояние. e.target.id хранит айдиху нажатого пользователя
+            };
+
+             email_td.addEventListener('click', email_listener);
+
               tr.appendChild(email_td);
               let role_td = document.createElement("td");
               role_td.innerText = userData.role;
