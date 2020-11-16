@@ -45,11 +45,12 @@ var firstTime = true;
 const router = async () => {
     if (firstTime){
         firstTime = false;
-        alert("Vu Krasavcy");
+        //alert("Vu Krasavcy");
         location.hash = "#/index";
         return;
     }
 
+    //alert("My s vami do konca");
     let request = Utils.parseRequestURL();
     /*let parsedURL = (request.resource ? '/' + request.resource : '/') + 
         (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '');
