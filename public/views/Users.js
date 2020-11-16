@@ -25,7 +25,6 @@ let Users = {
               
               let email_listener = (e) =>{
                 console.log(e.target.innerText);
-                // Валя здесь надо будет в бд присвоить пользователю новое состояние. e.target.id хранит айдиху нажатого пользователя
             };
 
              email_td.addEventListener('click', email_listener);

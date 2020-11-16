@@ -76,6 +76,7 @@ function renderSong(key, song){
 	let p1 = document.createElement('p');
 	p1.className = 'p-song-description';
 	p1.innerText = song.performer;
+	p1.classList.add('song-perfoner');
 	article.appendChild(p1);
 	let p2 = document.createElement('p');
 	p2.className = 'p-song-description';
