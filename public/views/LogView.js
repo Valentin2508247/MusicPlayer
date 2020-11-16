@@ -1,3 +1,11 @@
+function createRow(data){
+    let tr = document.createElement("tr");
+
+    let email_td = document.createElement("td");
+    
+    return tr;
+}
+
 let LogView = {
     render: async (id) =>{
         return `
@@ -12,9 +20,23 @@ let LogView = {
 
     afterRender: async (id) => {
         let logsTable = document.querySelector("#ul-logs-table");
-        db.ref("tracks").once('value', function(snapshot) {  
+        if (id){
+            //only from this user
+            db.ref('logs/' + id).once('value', function(snapshot) {  
+                snapshot.forEach(function(childSnapshot) {
+                    alert('Hello from ' + id);
+                    var songId = childSnapshot.key;
+                    var songData = childSnapshot.val();
+                    let tr = createRow(songData);
+                });
+            });    
+        }
+        else{
+            //from all users
+            alert('Hello');
+        }
 
-        });
+
     }
 }
 

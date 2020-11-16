@@ -15,11 +15,20 @@ let Users = {
 
         db.ref("users").once('value', function(snapshot) {  
             snapshot.forEach(function(childSnapshot) {
-              // var userId = childSnapshot.key;
+              var userId = childSnapshot.key;
               var userData = childSnapshot.val();
               let tr = document.createElement("tr");
               tr.classList.add('ul-users-tr');
               let email_td = document.createElement("td");
+              
+              let email_listener = (e) =>{
+                console.log(e.target.innerText);
+                // Валя здесь надо будет в бд присвоить пользователю новое состояние. e.target.id хранит айдиху нажатого пользователя
+                location.hash = '#/logview/' + userId;
+              };  
+
+              email_td.addEventListener('click', email_listener);
+
               email_td.innerText = userData.email;
               tr.appendChild(email_td);
               let role_td = document.createElement("td");
@@ -28,17 +37,39 @@ let Users = {
 
               let status_td = document.createElement("td");
               let block_btn = document.createElement('button');
-              block_btn.id = `${userData.email}`;
+              block_btn.id = `${userId}`;
               block_btn.classList.add('user-btn');
 
-              if('user is blocked') // обрати внимание на этот код. поменяй, используя бд
+              if (userData.blocked){
                 block_btn.innerText = 'Unblock';
-              else('user is not blocked')
+              }
+              else{
                 block_btn.innerText = 'Block';
+              }
+
 
               let btn_listener = (e) =>{
-                e.target.innerText = e.target.innerText === 'Block' ? e.target.innerText = 'Unblock' : e.target.innerText = 'Block';
-                // Валя здесь надо будет в бд присвоить пользователю новое состояние. e.target.id хранит айдиху нажатого пользователя
+                if (userData.role != 'Admin'){
+                  // Валя здесь надо будет в бд присвоить пользователю новое состояние. e.target.id хранит айдиху нажатого пользователя
+                  if ( e.target.innerText === 'Block'){
+                    db.ref('users/' + e.target.id).set(
+                      {
+                        email: userData.email,
+                        role: userData.role,
+                        blocked: true
+                      }
+                    );
+                  }
+                  else{
+                    db.ref('users/' + e.target.id).set(
+                      {
+                        email: userData.email,
+                        role: userData.role
+                      }
+                    );
+                  }
+                  e.target.innerText = e.target.innerText === 'Block' ? e.target.innerText = 'Unblock' : e.target.innerText = 'Block';
+                }
             };
     
               block_btn.addEventListener('click', btn_listener);
