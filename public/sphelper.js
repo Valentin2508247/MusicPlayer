@@ -45,7 +45,10 @@ var firstTime = true;
 const router = async () => {
     if (firstTime){
         firstTime = false;
+<<<<<<< HEAD
         //alert("Vu Krasavcy");
+=======
+>>>>>>> 9b663350b943289dd77d28c60dfb20cff3e99556
         location.hash = "#/index";
         return;
     }
